@@ -148,17 +148,37 @@ nav {
   background-color: rgb(169, 129, 101);
   color: #ffffff;
 }
+@keyframes samo {
+  from {
+    transform: translateY(10);
+  }
+  to {
+    transform: translateY(5%);
+  }
+}
 
 #samosa-blur {
   position: absolute;
   left: 150px;
   top: 150px;
+  animation: samo 3s infinite alternate-reverse;
+  animation-timing-function: linear;
+}
+@keyframes puff {
+  from {
+    transform: translateY(30px);
+  }
+  to {
+    transform: translateY(50px);
+  }
 }
 
 #puff-puffbdg {
   position: absolute;
   left: 900px;
   top: 400px;
+  animation: puff 3s infinite alternate-reverse;
+  animation-timing-function: linear;
 }
 
 #bdgimg {
@@ -274,9 +294,9 @@ nav {
   width: 60px;
   padding: 15px;
   margin-top: 80px;
-  position: sticky;
+  position: fixed;
   overflow: visible;
-  top: 200px;
+  top: 300px;
   display: flex;
   flex-direction: column;
   /* justify-content: space-evenly; */
@@ -557,15 +577,33 @@ li a {
 .footer{
   background-color: #664f3c;
   color: #ffffff;
-  position: relative;
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5rem 0 0 8rem;
 }
-.fouth-con{
-  /* padding: 50px; */
-  /* display: flex; */
-  /* justify-content: space-between; */
+#corporate{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
-.groupb{
-
-
+#last-list{
+  color: #ffffff;
+  transition: .3s;
+}
+#last-list:hover{
+  color: #A98165;
+}
+.footer-icons{
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+#us-on{
+  margin-top: 4rem;
+}
+#made-bg{
+  margin-top: 8rem;
 }
